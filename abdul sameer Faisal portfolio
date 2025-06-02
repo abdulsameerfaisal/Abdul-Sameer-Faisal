@@ -1,0 +1,83 @@
+import { useState } from 'react'; import { Moon, Sun } from 'lucide-react';
+
+export default function Portfolio() { const [darkMode, setDarkMode] = useState(false);
+
+return ( <div className={darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}> <header className="p-6 bg-blue-800 text-white flex justify-between items-center"> <h1 className="text-2xl font-bold">Abdul Sameer Faisal</h1> <button onClick={() => setDarkMode(!darkMode)} className="p-2"> {darkMode ? <Sun /> : <Moon />} </button> </header>
+
+<main className="p-6 space-y-10">
+    <section id="about">
+      <h2 className="text-xl font-semibold">About Me</h2>
+      <p>
+        Aspiring Mechanical Engineer with skills in manufacturing maintenance, Additive Manufacturing, and simulation tools.
+        Eager to contribute to innovative and growth-driven projects.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2 className="text-xl font-semibold">Education</h2>
+      <ul className="list-disc list-inside">
+        <li>B.Tech, Mechanical Engineering, LBRCE - CGPA 8.18 (2023)</li>
+        <li>Intermediate, Sri Chaitanya Junior College (2019)</li>
+        <li>10th, Sri Chaitanya Techno School (2017)</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2 className="text-xl font-semibold">Skills</h2>
+      <ul className="list-disc list-inside columns-2">
+        <li>AutoCAD, CATIA V5, Fusion 360</li>
+        <li>Hypermesh, Ls-Dyna</li>
+        <li>Python, C</li>
+        <li>Excel, Word, PowerPoint</li>
+        <li>3D Printing, Thermal Systems</li>
+        <li>Material Selection, GD&T</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2 className="text-xl font-semibold">Projects</h2>
+      <p>
+        <strong>Post Processing Tool for WAAM Components (Patented)</strong><br />
+        Enhanced WAAM surface quality and dimensional accuracy.
+      </p>
+    </section>
+
+    <section id="internship">
+      <h2 className="text-xl font-semibold">Internship</h2>
+      <p>
+        <strong>BABA Automobiles Pvt Ltd (Aug–Sep 2022)</strong><br />
+        Worked on EV tech, battery systems, and hybrid engines.
+      </p>
+    </section>
+
+    <section id="activities">
+      <h2 className="text-xl font-semibold">Activities & Certifications</h2>
+      <ul className="list-disc list-inside">
+        <li>Vice President, Student Council (LBRCE)</li>
+        <li>Coordinator, CIIE & Lakshya Fest</li>
+        <li>ISHRAE Member</li>
+        <li>Advance Surface Design - CATIA (APSSDC)</li>
+        <li>Fusion 360 Design Contest - Autodesk</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2 className="text-xl font-semibold">Contact</h2>
+      <p>Email: abdulsameerfaisal@gmail.com</p>
+      <p>Location: Vijayawada, Andhra Pradesh</p>
+      <p>
+        LinkedIn:{' '}
+        <a href="https://www.linkedin.com/in/abdulsameerfaisal" className="text-blue-500 underline" target="_blank">
+          abdulsameerfaisal
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer className="p-4 text-center bg-blue-800 text-white">
+    &copy; 2025 Abdul Sameer Faisal
+  </footer>
+</div>
+
+); }
+
